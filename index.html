@@ -2,9 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no"/>
+  <!-- 浏览器不会自动调整文件的大小,也就是说是固定大小,不会随着浏览器拉伸缩放。 -->
+  <meta name="MobileOptimized" content="320">
+  <!-- 添加到主屏幕“后，全屏显示-->
+  <meta name="apple-touch-fullscreen" content="yes">
+  <!-- 如果内容设置为YES，Web应用程序运行在全屏模式;
+    否则，它不会。默认行为是使用Safari浏览器显示网页内容-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <!-- 清浏览器缓存 -->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>Calculator</title>
+  <script>
+    var setRem = function (){
+      var _clientWidth = document.documentElement.clientWidth > 640 ? 640 : document.documentElement.clientWidth;
+      var _html = document.querySelector('html');
+      _html.style.fontSize = (_clientWidth / 375).toFixed(1) * 20 + 'px';
+    };
+    setRem();
+    window.onresize = setRem;
+  </script>
+  <style>
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+    ul,li,ol {
+      list-style: none;
+    }
+    html {
+      margin: 0 auto;
+    }
+    body {
+      /*background-color: #000;*/
+      width: 100%;
+    }
+    .flex {
+      display: flex;
+      display: -webkit-flex;
+    }
+    .flex-1 {
+      flex: 1;
+    }
+    .flex-2 {
+      flex: 2;
+    }
+    .flex-4 {
+      flex: 4;
+    }
+    .result {
+      padding: 2rem .5rem .2rem .5rem;
+      background-color: #222;
+      color: #fff;
+      font-size: 4rem;
+      text-align: right;
+    }
+  </style>
 </head>
 <body>
+  <div class="wrap">
+    <ul>
+      <li class="flex-4 result">0</li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+      <li class="flex-2"></li>
+      <li class="flex-1"></li>
+      <li class="flex-1"></li>
+    </ul>
+  </div>
+<script>
 
+</script>
 </body>
 </html>
